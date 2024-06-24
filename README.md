@@ -17,11 +17,11 @@ PDFMasterTool is a comprehensive PDF manipulation tool written in Python. It all
 ## Installation
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/PDFMasterTool.git
+    git clone https://github.com/n1motv/pdf_master_tool
     ```
 2. Navigate to the project directory:
     ```sh
-    cd PDFMasterTool
+    cd pdf_master_tool
     ```
 3. Install the required dependencies:
     ```sh

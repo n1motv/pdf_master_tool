@@ -67,5 +67,5 @@ python pdf_tool.py unlock input.pdf output.pdf password
 python pdf_tool.py protect input.pdf output.pdf password
 ```
 
-##Contributing
+## Contributing
 Contributions are welcome! Please fork the repository and submit a pull request.

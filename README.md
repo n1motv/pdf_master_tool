@@ -33,8 +33,6 @@ PDFMasterTool is a comprehensive PDF manipulation tool written in Python. It all
     ```
 
 ## Usage
-
-## Usage
 ```sh
 # Merging PDFs
 python pdf_tool.py merge file1.pdf file2.pdf output.pdf

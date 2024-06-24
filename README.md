@@ -1,4 +1,4 @@
-# PDFMasterTool
+# PDF Master Tool
 
 PDFMasterTool is a comprehensive PDF manipulation tool written in Python. It allows users to merge, split, compress, convert, rotate, add page numbers, repair, lock, and unlock PDF files effortlessly.
 

@@ -25,8 +25,8 @@ PDFMasterTool is a comprehensive PDF manipulation tool written in Python. It all
     ```
 3. Install the required dependencies:
    ```sh
-sudo apt-get update
-sudo apt-get install -y poppler-utils ghostscript
+    sudo apt-get update
+    sudo apt-get install -y poppler-utils ghostscript
     ```
     ```sh
     pip install -r requirements.txt

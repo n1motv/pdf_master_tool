@@ -13,6 +13,7 @@ PDF Master Tool is a comprehensive PDF manipulation tool written in Python. It a
 - Repair corrupted PDF files.
 - Unlock password-protected PDFs.
 - Protect PDF files with a password.
+- Convert URL to PDF file
 
 ## Installation
 1. Clone the repository:
@@ -27,6 +28,7 @@ PDF Master Tool is a comprehensive PDF manipulation tool written in Python. It a
    ```sh
     sudo apt-get update
     sudo apt-get install -y poppler-utils ghostscript
+    sudo apt-get install wkhtmltopdf
     ```
     ```sh
     pip install -r requirements.txt
@@ -67,6 +69,9 @@ python pdf_tool.py unlock input.pdf output.pdf password
 
 # Protecting PDFs
 python pdf_tool.py protect input.pdf output.pdf password
+
+#Converting URL to PDF
+python pdf_tool.py url_to_pdf www.example.com output.pdf
 ```
 
 ## Contributing

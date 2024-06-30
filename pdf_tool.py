@@ -8,6 +8,7 @@ from reportlab.lib.pagesizes import A4
 from pikepdf import Pdf, Encryption
 import io
 import subprocess
+import pdfkit
 
 def merge_pdfs(input_files, output_file):
     pdf_merger = PyPDF2.PdfMerger()
@@ -157,6 +158,10 @@ def protect_pdf(input_file, output_file, password):
         pdf_writer.write(out)
     print(f"PDF file {input_file} protected with a password and saved as {output_file}")
 
+def url_to_pdf(url, output_file):
+    pdfkit.from_url(url, output_file)
+    print(f"URL {url} converted to PDF and saved as {output_file}")
+
 def main():
     parser = argparse.ArgumentParser(
         description="PDF manipulation tool",
@@ -220,6 +225,11 @@ def main():
     protect_parser.add_argument("output_file", help="Output protected PDF file")
     protect_parser.add_argument("password", help="Password to protect the PDF file")
 
+    # URL to PDF command
+    url_to_pdf_parser = subparsers.add_parser("url_to_pdf", help="Convert a webpage to PDF")
+    url_to_pdf_parser.add_argument("url", help="URL of the webpage to convert to PDF")
+    url_to_pdf_parser.add_argument("output_file", help="Output PDF file")
+
     args = parser.parse_args()
 
     if args.command == "merge":
@@ -242,6 +252,8 @@ def main():
         unlock_pdf(args.input_file, args.output_file, args.password)
     elif args.command == "protect":
         protect_pdf(args.input_file, args.output_file, args.password)
+    elif args.command == "url_to_pdf":
+        url_to_pdf(args.url, args.output_file)
     else:
         parser.print_help()
 

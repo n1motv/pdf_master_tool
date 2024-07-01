@@ -1,6 +1,6 @@
 # PDF Master Tool
 
-PDF Master Tool is a comprehensive PDF manipulation tool written in Python. It allows users to merge, split, compress, convert, rotate, add page numbers, repair, lock, and unlock PDF files effortlessly.
+PDF Master Tool is a comprehensive PDF manipulation tool written in Python with command line and GUI version . It allows users to merge, split, compress, convert, rotate, add page numbers, repair, lock, and unlock PDF files effortlessly.
 
 ## Features
 - Merge multiple PDF files into one.
@@ -25,16 +25,20 @@ PDF Master Tool is a comprehensive PDF manipulation tool written in Python. It a
     cd pdf_master_tool
     ```
 3. Install the required dependencies:
+    ### For Windows
    ```sh
-    sudo apt-get update
-    sudo apt-get install -y poppler-utils ghostscript
-    sudo apt-get install wkhtmltopdf
+    install_dependencies.bat
     ```
+    ### For Linux
     ```sh
-    pip install -r requirements.txt
+    install_dependencies.sh
+    ```
+    ### For Mac (macOS folder)
+    ```sh
+    install_dependencies.sh
     ```
 
-## Usage
+## Usage ( For Command line version )
 ```sh
 # Merging PDFs
 python pdf_tool.py merge file1.pdf file2.pdf output.pdf
@@ -73,6 +77,10 @@ python pdf_tool.py protect input.pdf output.pdf password
 #Converting URL to PDF
 python pdf_tool.py url_to_pdf www.example.com output.pdf
 ```
-
+## Usage ( For GUI version ) 
+Run the python script directly
+```sh
+python pdf_tool_gui.py
+```
 ## Contributing
 Contributions are welcome! Please fork the repository and submit a pull request.
